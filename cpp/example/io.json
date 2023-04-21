@@ -1,0 +1,49 @@
+{
+	"input":
+	{
+		"eta":
+		{
+			"phase0" : "../example_phases/phase_pipi_0.dat",
+			"phase1" : "../example_phases/phase_pipi_1.dat",
+			"phase2" : "../example_phases/phase_pipi_2.dat",
+			"phaseetapi" : "../example_phases/phase_etapi_0.dat"
+		},
+		"V3Pi":
+		{
+			"phase1" : "../example_phases/phase.txt"
+		},
+		"X3Pi":
+		{
+			"phase1" : "../example_phases/phase.txt"
+		}
+	},
+	"output":
+	{
+		"eta":
+		{
+			"a0" : "../results/a0.dat",
+			"b0" : "../results/b0.dat",
+			"a1" : "../results/a1.dat",
+			"g1" : "../results/g1.dat",
+			"h1" : "../results/h1.dat",
+
+			"a0_sub" : "../results/a0_sub.dat",
+			"b0_sub" : "../results/b0_sub.dat",
+			"c0_sub" : "../results/c0_sub.dat",
+			"d0_sub" : "../results/d0_sub.dat",
+			"a1_sub" : "../results/a1_sub.dat",
+			"b1_sub" : "../results/b1_sub.dat"
+		},
+		"V3Pi":
+		{
+			"a" : "../results/a.dat",
+			"b" : "../results/b.dat",
+			"dalitz" : "../results/dalitz.dat"
+		},
+		"X3Pi":
+		{
+			"a" : "../results/a.dat",
+			"b" : "../results/b.dat"
+		}
+	}
+}

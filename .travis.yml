@@ -1,0 +1,36 @@
+matrix:
+    include:
+        # direct tests of facilities written in c++
+        - language: cpp
+          os: linux
+          dist: bionic
+          compiler:
+              - gcc
+          script:
+              - mkdir ./cpp/tests/build
+              - cd ./cpp/tests/build
+              - cmake ..
+              - make
+              - ctest
+        # python tests (this includes tests of c++ code if there is a python
+        # interface for that code and a corresponding test)
+        - language: python
+          python: 3.7
+          os: linux
+          dist: bionic
+          install:
+              - pip install scipy
+              - pip install .
+              - pip install pytest-cov
+              - pip install coveralls
+          script:
+              - pytest --cov=khuri khuri/tests/
+          after_sucess:
+              - coveralls
+before_install:
+    - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+    - sudo apt update -q
+    - sudo apt install g++-8
+    - eval "CC=gcc-8 && CXX=g++-8"
+    - sudo apt install libgsl-dev
+    - sudo apt install libeigen3-dev
