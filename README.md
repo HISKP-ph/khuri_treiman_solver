@@ -1,3 +1,6 @@
+
+[![DOI](https://zenodo.org/badge/630925513.svg)](https://zenodo.org/badge/latestdoi/630925513)
+
 # khuri
 
 Khuri-Treiman equations for different decay processes. The python API uses the Gasser-Rusetsky method, while the c++ API uses the Pinocchio method.\
