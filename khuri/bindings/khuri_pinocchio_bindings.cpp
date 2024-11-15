@@ -66,9 +66,18 @@ PYBIND11_MODULE(_khuri_pinocchio, m) {
         "output_XX path name to export the basis solutions for the subtraction constant XX";
 
     py::enum_<enums::SubtractionConstant>(m, "SubtractionConstant")
+        .value("a0", enums::SubtractionConstant::a0)
+        .value("b0", enums::SubtractionConstant::b0)
         .value("a1", enums::SubtractionConstant::a1)
+        .value("g1", enums::SubtractionConstant::g1)
+        .value("h1", enums::SubtractionConstant::h1)
         .value("b1", enums::SubtractionConstant::b1)
-        .value("g1", enums::SubtractionConstant::g1);
+        .value("sub_a0", enums::SubtractionConstant::sub_a0)
+        .value("sub_b0", enums::SubtractionConstant::sub_b0)
+        .value("sub_c0", enums::SubtractionConstant::sub_c0)
+        .value("sub_d0", enums::SubtractionConstant::sub_d0)
+        .value("sub_a1", enums::SubtractionConstant::sub_a1)
+        .value("sub_b1", enums::SubtractionConstant::sub_b1);
         
 
     py::enum_<enums::Setting>(m, "Setting")
