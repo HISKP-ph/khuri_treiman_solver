@@ -1508,7 +1508,7 @@ Complex DispersionEta3Pi::disp_integral_trivial(Complex s,  bool adaptive)const{
     if (isospin==1) {
         return numeric_integral_pseudo(s, x_I, cutoff, adaptive)
         +numerator(x_III) * analytic_integral_Q(s, x_I, cutoff, 1)
-        +numerator_1_derivative_s_below * analytic_integral_Q(s, x_I, cutoff, 1);
+        +numerator_1_derivative_s_below * analytic_integral_Q(s, x_I, cutoff, 0);
     }
     throw std::domain_error{"Isospin should be either 0, 1 or 2."};
 }
